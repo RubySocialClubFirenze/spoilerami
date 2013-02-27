@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Film title:</b>
+  <%= @spoiler.film_title %>
+</p>
+
+<p>
+  <b>Spoiler:</b>
+  <%= @spoiler.spoiler %>
+</p>
+
+<p>
+  <b>Vote:</b>
+  <%= @spoiler.vote %>
+</p>
+
+<p>
+  <b>Vote counter:</b>
+  <%= @spoiler.vote_counter %>
+</p>
+
+
+<%= link_to 'Edit', edit_spoiler_path(@spoiler) %> |
+<%= link_to 'Back', spoilers_path %>

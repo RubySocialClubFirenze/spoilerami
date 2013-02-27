@@ -1,0 +1,29 @@
+<h1>Listing spoilers</h1>
+
+<table>
+  <tr>
+    <th>Film title</th>
+    <th>Spoiler</th>
+    <th>Vote</th>
+    <th>Vote counter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @spoilers.each do |spoiler| %>
+  <tr>
+    <td><%= spoiler.film_title %></td>
+    <td><%= spoiler.spoiler %></td>
+    <td><%= spoiler.vote %></td>
+    <td><%= spoiler.vote_counter %></td>
+    <td><%= link_to 'Show', spoiler %></td>
+    <td><%= link_to 'Edit', edit_spoiler_path(spoiler) %></td>
+    <td><%= link_to 'Destroy', spoiler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Inserisci nuovo spoiler', new_spoiler_path %>
