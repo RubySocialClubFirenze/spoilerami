@@ -19,10 +19,14 @@ group :test do
   gem 'guard-cucumber'
 
   gem 'capybara'
+  # for use this headless browser you must install it from https://code.google.com/p/phantomjs/
+  gem 'poltergeist'
 
   gem 'factory_girl_rails'
   gem 'database_cleaner'
 end
+
+gem 'simplecov', :require => false, :group => :test
 
 # Gems used only for assets and not required
 # in production environments by default.
